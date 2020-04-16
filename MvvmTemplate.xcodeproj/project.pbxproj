@@ -13,13 +13,15 @@
 		C761B9C42448761D00FD40CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C761B9C22448761D00FD40CF /* Main.storyboard */; };
 		C761B9C62448761E00FD40CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C761B9C52448761E00FD40CF /* Assets.xcassets */; };
 		C761B9C92448761E00FD40CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C761B9C72448761E00FD40CF /* LaunchScreen.storyboard */; };
-		C761B9D42448761F00FD40CF /* MvvmTemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761B9D32448761F00FD40CF /* MvvmTemplateTests.swift */; };
 		C761B9DF2448761F00FD40CF /* MvvmTemplateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761B9DE2448761F00FD40CF /* MvvmTemplateUITests.swift */; };
 		C761B9ED244876B500FD40CF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761B9EC244876B500FD40CF /* Model.swift */; };
 		C761B9EF2448772700FD40CF /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761B9EE2448772700FD40CF /* DynamicValue.swift */; };
 		C761B9F42448797800FD40CF /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761B9F32448797800FD40CF /* GenericDataSource.swift */; };
 		C761B9F624487A1F00FD40CF /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761B9F524487A1F00FD40CF /* MovieViewModel.swift */; };
 		C761B9F924487C8C00FD40CF /* MovieDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761B9F824487C8C00FD40CF /* MovieDataSource.swift */; };
+		C7D1483F2448834600EE298B /* MovieFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1483E2448834600EE298B /* MovieFetcherService.swift */; };
+		C7D14841244888F000EE298B /* MovieViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D14840244888EF00EE298B /* MovieViewModelTests.swift */; };
+		C7D1484324488F7100EE298B /* MovieDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1484224488F7100EE298B /* MovieDataSourceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +51,6 @@
 		C761B9C82448761E00FD40CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C761B9CA2448761E00FD40CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C761B9CF2448761F00FD40CF /* MvvmTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MvvmTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C761B9D32448761F00FD40CF /* MvvmTemplateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvvmTemplateTests.swift; sourceTree = "<group>"; };
 		C761B9D52448761F00FD40CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C761B9DA2448761F00FD40CF /* MvvmTemplateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MvvmTemplateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C761B9DE2448761F00FD40CF /* MvvmTemplateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvvmTemplateUITests.swift; sourceTree = "<group>"; };
@@ -59,6 +60,9 @@
 		C761B9F32448797800FD40CF /* GenericDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
 		C761B9F524487A1F00FD40CF /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		C761B9F824487C8C00FD40CF /* MovieDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataSource.swift; sourceTree = "<group>"; };
+		C7D1483E2448834600EE298B /* MovieFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFetcherService.swift; sourceTree = "<group>"; };
+		C7D14840244888EF00EE298B /* MovieViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModelTests.swift; sourceTree = "<group>"; };
+		C7D1484224488F7100EE298B /* MovieDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataSourceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +124,8 @@
 		C761B9D22448761F00FD40CF /* MvvmTemplateTests */ = {
 			isa = PBXGroup;
 			children = (
-				C761B9D32448761F00FD40CF /* MvvmTemplateTests.swift */,
+				C7D1484224488F7100EE298B /* MovieDataSourceTests.swift */,
+				C7D14840244888EF00EE298B /* MovieViewModelTests.swift */,
 				C761B9D52448761F00FD40CF /* Info.plist */,
 			);
 			path = MvvmTemplateTests;
@@ -167,6 +172,7 @@
 		C7A78E6A24487DB100F910B1 /* MovieViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C7D1483E2448834600EE298B /* MovieFetcherService.swift */,
 				C761B9F524487A1F00FD40CF /* MovieViewModel.swift */,
 				C761B9F824487C8C00FD40CF /* MovieDataSource.swift */,
 				C761B9C02448761D00FD40CF /* ViewController.swift */,
@@ -313,6 +319,7 @@
 				C761B9EF2448772700FD40CF /* DynamicValue.swift in Sources */,
 				C761B9BF2448761D00FD40CF /* SceneDelegate.swift in Sources */,
 				C761B9F624487A1F00FD40CF /* MovieViewModel.swift in Sources */,
+				C7D1483F2448834600EE298B /* MovieFetcherService.swift in Sources */,
 				C761B9ED244876B500FD40CF /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,7 +328,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C761B9D42448761F00FD40CF /* MvvmTemplateTests.swift in Sources */,
+				C7D14841244888F000EE298B /* MovieViewModelTests.swift in Sources */,
+				C7D1484324488F7100EE298B /* MovieDataSourceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

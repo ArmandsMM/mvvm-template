@@ -8,16 +8,33 @@
 
 import Foundation
 
-struct MovieViewModel {
-    weak var datasource: GenericDataSource<[Movie]>?
+protocol MovieFetcher: class {
+    func fetchMovies(_ completion: @escaping ((Result<[Movie], CoreError>) -> Void))
+}
 
-    init(_ datasource: GenericDataSource<[Movie]>?) {
-        self.datasource = datasource
+struct MovieViewModel {
+    weak var dataSource: GenericDataSource<[Movie]>?
+    weak var service: MovieFetcher?
+
+    init(_ service: MovieFetcher = MovieFetcherService.shared, dataSource: GenericDataSource<[Movie]>?) {
+        self.dataSource = dataSource
+        self.service = service
     }
 
-    public func fetchMovies() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-            self.datasource?.data.value = Movie.stubbedList()
+    public func fetchMovies(_ completion: @escaping ((Result<Bool, CoreError>) -> Void)) {
+        guard let service = service else {
+            completion(.failure(.missingService))
+            return
+        }
+
+        service.fetchMovies { result in
+            switch result {
+            case .failure(let error):
+                completion(.failure(error))
+            case .success(let list):
+                self.dataSource?.data.value = list
+                completion(.success(true))
+            }
         }
     }
 }

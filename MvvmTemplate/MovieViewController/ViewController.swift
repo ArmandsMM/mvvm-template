@@ -14,7 +14,7 @@ class ViewController: UIViewController {
 
     let dataSource = MovieDataSource(data: [])
     lazy var viewModel: MovieViewModel = {
-        let vm = MovieViewModel(dataSource)
+        let vm = MovieViewModel(dataSource: dataSource)
         return vm
     }()
 
@@ -24,10 +24,10 @@ class ViewController: UIViewController {
         self.title = "Movie List"
         self.tableView.dataSource = dataSource
 
-        viewModel.datasource?.data.addObserverAndNotify(self, completionHandler: { [weak self] in
+        viewModel.dataSource?.data.addObserverAndNotify(self, completionHandler: { [weak self] in
             self?.tableView.reloadData()
         })
 
-        viewModel.fetchMovies()
+        viewModel.fetchMovies { _ in }
     }
 }
